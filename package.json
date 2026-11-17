@@ -9,7 +9,7 @@
     "@pracht/vite-plugin": "1.0.0",
     "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^26.6.6",
-    "preact": "^11.2.0",
+    "preact": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz",
     "preact-render-to-string": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz",
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
@@ -22,7 +22,8 @@
       "esbuild"
     ],
     "overrides": {
-      "preact-render-to-string": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz"
+      "preact-render-to-string": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz",
+      "preact": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz"
     }
   },
   "packageManager": "pnpm@10.33.0",

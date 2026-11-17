@@ -6,6 +6,7 @@ settings:
 
 overrides:
   preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz
+  preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz
 
 importers:
 
@@ -13,20 +14,20 @@ importers:
     dependencies:
       '@pracht/adapter-vercel':
         specifier: 1.0.0
-        version: 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))
+        version: 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))
       '@pracht/capabilities':
         specifier: 1.0.0
         version: 1.0.0
       '@pracht/core':
         specifier: 1.0.0
-        version: 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)
+        version: 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)
     devDependencies:
       '@pracht/cli':
         specifier: 1.18.0
-        version: 1.18.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
+        version: 1.18.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
       '@pracht/vite-plugin':
         specifier: 1.0.0
-        version: 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
+        version: 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
       '@tailwindcss/vite':
         specifier: ^4.3.5
         version: 4.3.5(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
@@ -34,11 +35,11 @@ importers:
         specifier: ^26.6.6
         version: 26.6.6
       preact:
-        specifier: ^11.2.0
-        version: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
+        specifier: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz
+        version: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
       preact-render-to-string:
         specifier: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz
-        version: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0)
+        version: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0-pr5360.5b2bc23)
       tailwindcss:
         specifier: ^4.3.5
         version: 4.3.5
@@ -2146,8 +2147,9 @@ packages:
     peerDependencies:
       preact: '>=10 || >= 11.0.0-0'
 
-  preact@11.2.0:
-    resolution: {integrity: sha512-/HfHI/7N84e6GrWBJ3J280z3mLaRJiDcSvj/A+y/4AbLnND/1UlGHe1sR6oYuTGwId0nP7dqDU9OnLxMPZ7xBg==}
+  preact@https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz:
+    resolution: {integrity: sha512-3ZDIVL312JuIVREu+mTfc4ROScVL079yu2lcBNVq7yzzxcOvsMeib9EebVDn/BBtVReplw3ZQ8x8kpydwzCYOQ==, tarball: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz}
+    version: 11.2.0-pr5360.5b2bc23
     peerDependencies:
       preact-render-to-string: '>=6.7.0'
     peerDependenciesMeta:
@@ -2992,22 +2994,22 @@ snapshots:
   '@oxc-transform/binding-win32-x64-msvc@0.111.0':
     optional: true
 
-  '@pracht/adapter-node@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))':
+  '@pracht/adapter-node@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))':
     dependencies:
-      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)
+      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)
 
-  '@pracht/adapter-vercel@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))':
+  '@pracht/adapter-vercel@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))':
     dependencies:
-      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)
+      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)
 
   '@pracht/capabilities@1.0.0':
     dependencies:
       '@standard-schema/spec': 1.1.0
 
-  '@pracht/cli@1.18.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
+  '@pracht/cli@1.18.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
     dependencies:
       '@pracht/capabilities': 1.0.0
-      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)
+      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)
       citty: 0.1.6
     optionalDependencies:
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0)
@@ -3015,29 +3017,29 @@ snapshots:
       - preact
       - preact-render-to-string
 
-  '@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)':
+  '@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)':
     dependencies:
       '@pracht/capabilities': 1.0.0
       '@standard-schema/spec': 1.1.0
-      preact: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
-      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0)
+      preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
+      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0-pr5360.5b2bc23)
       web-vitals: 6.2.3
 
-  '@pracht/preact-ssr-precompile@0.2.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
+  '@pracht/preact-ssr-precompile@0.2.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
     dependencies:
       magic-string: 0.30.21
-      preact: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
-      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0)
+      preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
+      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0-pr5360.5b2bc23)
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0)
 
-  '@pracht/vite-plugin@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
+  '@pracht/vite-plugin@1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
     dependencies:
       '@babel/parser': 7.29.8
-      '@pracht/adapter-node': 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0))
+      '@pracht/adapter-node': 1.0.0(@pracht/core@1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23))
       '@pracht/capabilities': 1.0.0
-      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)
-      '@pracht/preact-ssr-precompile': 0.2.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
-      '@prefresh/vite': 2.4.12(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
+      '@pracht/core': 1.0.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)
+      '@pracht/preact-ssr-precompile': 0.2.0(preact-render-to-string@6.8.3-pr496.b48859d)(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
+      '@prefresh/vite': 2.4.12(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))
       es-module-lexer: 1.7.0
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0)
     transitivePeerDependencies:
@@ -3047,20 +3049,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.3': {}
 
-  '@prefresh/core@1.5.10(preact@11.2.0)':
+  '@prefresh/core@1.5.10(preact@11.2.0-pr5360.5b2bc23)':
     dependencies:
-      preact: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
+      preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
 
   '@prefresh/utils@1.2.1': {}
 
-  '@prefresh/vite@2.4.12(preact@11.2.0)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
+  '@prefresh/vite@2.4.12(preact@11.2.0-pr5360.5b2bc23)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0))':
     dependencies:
       '@babel/core': 7.29.7
       '@prefresh/babel-plugin': 0.5.3
-      '@prefresh/core': 1.5.10(preact@11.2.0)
+      '@prefresh/core': 1.5.10(preact@11.2.0-pr5360.5b2bc23)
       '@prefresh/utils': 1.2.1
       '@rollup/pluginutils': 4.2.1
-      preact: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
+      preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
       vite: 8.3.8(@types/node@26.6.6)(esbuild@0.27.0)(jiti@2.7.0)(tsx@4.21.0)
     transitivePeerDependencies:
       - supports-color
@@ -4431,13 +4433,13 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.2
 
-  preact-render-to-string@https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0):
+  preact-render-to-string@https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0-pr5360.5b2bc23):
     dependencies:
-      preact: 11.2.0(preact-render-to-string@6.8.3-pr496.b48859d)
+      preact: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d)
 
-  preact@11.2.0(preact-render-to-string@6.8.3-pr496.b48859d):
+  preact@https://github.com/MaxwellCohen/preact-eco-ci/releases/download/preact-pr5360-5b2bc23/preact-11.2.0-pr5360.5b2bc23.tgz(preact-render-to-string@6.8.3-pr496.b48859d):
     optionalDependencies:
-      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0)
+      preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz(preact@11.2.0-pr5360.5b2bc23)
 
   pretty-ms@7.0.1:
     dependencies:
