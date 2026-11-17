@@ -1,28 +1,22 @@
 {
   "dependencies": {
-    "@pracht/adapter-vercel": "file:vendor/pracht-streaming-pr/adapter-vercel",
-    "@pracht/capabilities": "file:vendor/pracht-streaming-pr/capabilities",
-    "@pracht/core": "file:vendor/pracht-streaming-pr/framework"
+    "@pracht/adapter-vercel": "1.0.0",
+    "@pracht/capabilities": "1.0.0",
+    "@pracht/core": "1.0.0"
   },
   "devDependencies": {
-    "@pracht/cli": "file:vendor/pracht-streaming-pr/cli",
-    "@pracht/vite-plugin": "file:vendor/pracht-streaming-pr/vite-plugin",
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/node": "^26.3.0",
-    "preact": "^11.0.0-rc.1",
-    "preact-render-to-string": "https://pkg.csb.dev/MaxwellCohen/preact-render-to-string/commit/da72a46b/preact-render-to-string",
-    "tailwindcss": "^4.3.3",
+    "@pracht/cli": "1.18.0",
+    "@pracht/vite-plugin": "1.0.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "preact": "^11.2.0",
+    "preact-render-to-string": "^6.8.3",
+    "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
-    "vercel": "^59.5.0",
-    "vite": "^8.0.0"
-  },
-  "overrides": {
-    "preact-render-to-string": "https://pkg.csb.dev/MaxwellCohen/preact-render-to-string/commit/da72a46b/preact-render-to-string"
+    "vercel": "^65.17.0",
+    "vite": "^8.3.8"
   },
   "pnpm": {
-    "overrides": {
-      "preact-render-to-string": "https://pkg.csb.dev/MaxwellCohen/preact-render-to-string/commit/da72a46b/preact-render-to-string"
-    },
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
       "esbuild"
@@ -32,8 +26,6 @@
   "name": "pract-dpu",
   "private": true,
   "scripts": {
-    "sync:pracht-pr": "node scripts/sync-pracht-streaming-pr.mjs",
-    "sync:rts": "node scripts/sync-preact-render-to-string.mjs",
     "build": "pracht build",
     "dev": "pracht dev --port 3004",
     "typecheck": "tsc --noEmit",
