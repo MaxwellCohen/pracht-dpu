@@ -3,3 +3,5 @@ packages:
 allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
+overrides:
+  preact-render-to-string: https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz

@@ -10,7 +10,7 @@
     "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^26.6.6",
     "preact": "^11.2.0",
-    "preact-render-to-string": "^6.8.3",
+    "preact-render-to-string": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz",
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
     "vercel": "^65.17.0",
@@ -20,7 +20,10 @@
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
       "esbuild"
-    ]
+    ],
+    "overrides": {
+      "preact-render-to-string": "https://github.com/MaxwellCohen/preact-eco-ci/releases/download/rts-pr496-b48859d/preact-render-to-string-6.8.3-pr496.b48859d.tgz"
+    }
   },
   "packageManager": "pnpm@10.33.0",
   "name": "pract-dpu",
