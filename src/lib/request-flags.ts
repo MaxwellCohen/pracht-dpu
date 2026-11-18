@@ -54,3 +54,42 @@ export function readSleep(key: string, ms: number): void {
   }
   use(ready);
 }
+
+/**
+ * Like `readSleep`, but the server-side promise rejects after `ms`, so the
+ * already-flushed fallback is handed to the client (`$s?` → `$s!`).
+ */
+export function readReject(key: string, ms: number): void {
+  let ready: Promise<void> | undefined;
+  if (typeof window === "undefined") {
+    const map = getRequestFlags().resources;
+    let promise = map.get(key);
+    if (!promise) {
+      promise = sleep(ms).then(() => {
+        throw new Error(`edge-case: ${key} gave up on the server`);
+      });
+      promise.catch(() => {});
+      map.set(key, promise);
+    }
+    ready = promise;
+  }
+  use(ready);
+}
+
+const clientResources = new Map<string, Promise<void>>();
+
+/** Suspend only in the browser (once per page load) for `ms`. */
+export function readClientSleep(key: string, ms: number): void {
+  if (typeof window === "undefined") return;
+  let promise = clientResources.get(key);
+  if (!promise) {
+    promise = sleep(ms);
+    clientResources.set(key, promise);
+  }
+  use(promise);
+}
+
+/** Resolves when `readClientSleep(key)` stops suspending. */
+export function clientSleepDone(key: string): Promise<void> {
+  return clientResources.get(key) ?? Promise.resolve();
+}

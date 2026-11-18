@@ -8,6 +8,7 @@ type CaseCompareProps = {
   badgeLabel: string;
   streamed: ComponentChildren;
   result: ComponentChildren;
+  probe?: ComponentChildren;
 };
 
 export function CaseCompare({
@@ -18,6 +19,7 @@ export function CaseCompare({
   badgeLabel,
   streamed,
   result,
+  probe,
 }: CaseCompareProps) {
   return (
     <section class="rounded-xl border border-zinc-200 bg-white p-4">
@@ -58,6 +60,7 @@ export function CaseCompare({
           </div>
         </figure>
       </div>
+      {probe}
     </section>
   );
 }

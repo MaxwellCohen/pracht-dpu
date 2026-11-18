@@ -1,5 +1,6 @@
 import type { ShellProps } from "@pracht/core";
 import { DpuSupportBanner } from "../components/dpu-support";
+import { EarlyHydrate } from "../components/early-hydrate";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { NoJsToggle } from "../components/no-js-toggle";
@@ -15,6 +16,7 @@ export function Shell({ children }: ShellProps) {
       </div>
       <main class="mx-auto max-w-5xl px-6 py-10">{children}</main>
       <Footer />
+      <EarlyHydrate />
     </div>
   );
 }
