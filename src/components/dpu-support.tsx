@@ -5,9 +5,9 @@ import { CounterButton } from "./streamed-counter";
 function StreamProbeFallback() {
   return (
     <div class="animate-pulse rounded-md border border-dashed border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-950">
-      Streaming… waiting for the Suspense boundary to resolve. Today a{" "}
-      <code class="text-xs">&lt;preact-island&gt;</code> patch replaces this;
-      DPU experiments target that swap.
+      Streaming… waiting for the Suspense boundary to resolve. A{" "}
+      <code class="text-xs">&lt;template for&gt;</code> chunk (Declarative
+      Partial Updates) replaces this when it arrives.
     </div>
   );
 }

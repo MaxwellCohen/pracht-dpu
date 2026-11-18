@@ -18,7 +18,7 @@ export function CounterButton() {
 
 /**
  * Client-only counter that suspends so the HTML stream flushes a fallback
- * first, then patches in the interactive button (today via `<preact-island>`).
+ * first, then patches in the interactive button (via a DPU `<template for>` chunk).
  */
 export function StreamedCounter() {
   return (

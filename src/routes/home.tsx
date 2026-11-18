@@ -44,16 +44,16 @@ export function Component() {
       <p class="mt-3 max-w-2xl text-zinc-600">
         Pages use plain <code class="text-sm">&lt;Suspense&gt;</code> + thrown
         promises so the HTML stream flushes fallbacks, then patches in resolved
-        UI. Today that patch is stock{" "}
-        <code class="text-sm">&lt;preact-island&gt;</code>; this app exists to
-        swap that path for{" "}
+        UI. That patch now uses{" "}
         <a
           class="underline underline-offset-2"
           href="https://developer.chrome.com/blog/declarative-partial-updates"
         >
           Declarative Partial Updates
         </a>
-        .
+        : each late chunk is a{" "}
+        <code class="text-sm">&lt;template for&gt;</code>, with a small inline
+        script as the fallback for browsers that can't apply it natively.
       </p>
 
       <ul class="mt-10 divide-y divide-zinc-200 border-y border-zinc-200">

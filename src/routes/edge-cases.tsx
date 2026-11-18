@@ -314,7 +314,7 @@ export function Component() {
   return (
     <ExampleShell
       title="Edge cases"
-      description="Popcorning, the HTML, SVG, MathML, and style completions that DPU struggles with, and hydration of ranges that are still pending. Left column is the live stream; right column is the settled target."
+      description="Popcorning, HTML, SVG, MathML, and style completions through DPU, and hydration of ranges that are still pending. Left column is the live stream; right column is the settled target."
     >
       <CaseCompare
         title="Popcorning"
@@ -341,7 +341,7 @@ export function Component() {
       />
 
       <CaseCompare
-        title="HTML — DPU works"
+        title="HTML — baseline"
         why="A pending HTML shell, then a completion that swaps fallback for template content. This is the baseline that should succeed."
         expected='Fallback removed. Visible text is “Done — declarative DPU worked”.'
         badge="ok"
@@ -356,10 +356,10 @@ export function Component() {
 
       <CaseCompare
         title="SVG — namespace"
-        why="The boundary sits inside <svg>. Declarative <template for> is HTML-namespaced, so a revealed <circle> may not be an SVGElement and may not paint."
+        why="The boundary sits inside <svg>. <template for> content is HTML-namespaced, so preact-render-to-string re-parses revealed nodes inside <svg> to give the <circle> the SVG namespace."
         expected="A tomato circle paints in the dashed frame (real SVG circle, svg namespace)."
-        badge="warn"
-        badgeLabel="May fail"
+        badge="ok"
+        badgeLabel="Should work"
         streamed={
           <SvgStage>
             <Suspense
@@ -389,10 +389,10 @@ export function Component() {
 
       <CaseCompare
         title="MathML — namespace"
-        why="Same insertion issue: template content is HTML, so <mi>/<mo>/<mn> may lose the MathML namespace when placed into <math>."
+        why="Same namespace issue inside <math>: revealed <mi>/<mo>/<mn> are re-parsed so they keep the MathML namespace."
         expected="The formula renders as x + 1 using MathML, not as unmatched HTML text."
-        badge="warn"
-        badgeLabel="May fail"
+        badge="ok"
+        badgeLabel="Should work"
         streamed={
           <math display="block">
             <Suspense fallback={<mtext>Loading…</mtext>}>

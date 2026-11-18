@@ -19,7 +19,7 @@ const tones = {
 /**
  * Suspends for `delayMs` then paints a toned panel. `readSleep` → `use(promise)`
  * (React-style) so Suspense can stream the fallback first, then resolved UI
- * (today via `<preact-island>`; later via DPU).
+ * (via a DPU `<template for>` chunk).
  */
 export function SlowPanel({
   label,
