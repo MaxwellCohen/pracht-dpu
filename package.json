@@ -27,7 +27,7 @@
     }
   },
   "packageManager": "pnpm@10.33.0",
-  "name": "pract-dpu",
+  "name": "pracht-dpu",
   "private": true,
   "scripts": {
     "build": "pracht build",
